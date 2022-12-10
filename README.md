@@ -1,6 +1,6 @@
 # House Plant Sustainment System
 
-## Mission State
+## Mission Statement
 To fulfill watering needs of house plants.  
 By leveraging automation tech stack.  
 Using Python, Raspberry Pi, Sensors, and Water Pumps.  
