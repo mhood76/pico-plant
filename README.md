@@ -9,3 +9,9 @@ Using Python, Raspberry Pi, Sensors, and Water Pumps.
 
 ### Conceptual Operations
 ![Alt text](ref/system-diagram.svg)
+
+
+
+
+## Useful Tutorials
+1. [Using ADC on Pico](https://how2electronics.com/how-to-use-adc-in-raspberry-pi-pico-adc-example-code/#ADC_in_Raspberry_Pi_Pico)
