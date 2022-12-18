@@ -161,3 +161,13 @@ cython_debug/
 
 # Database connection files to postgres on raspberry pi 4
 database.ini
+
+# Pico Setup Files
+openocd
+pico-examples
+pico-extras
+pico-playground
+picoprobe
+pico-sdk
+picotool
+
