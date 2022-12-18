@@ -159,6 +159,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
+# Database connection files to postgres on raspberry pi 4
+database.ini
+
 # Pico Setup Files
 openocd
 pico-examples
@@ -167,3 +170,4 @@ pico-playground
 picoprobe
 pico-sdk
 picotool
+
