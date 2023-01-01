@@ -17,7 +17,8 @@ def config(filename='database.ini', section='postgresql'):
         raise Exception('Section {0} not found in the {1} file'.format(section, filename))
     return db
 
-def store_measurement(sensor_uid, process_step, measure_value):
+
+def store_measure(sensor_uid, process_step, measure_value):
     # Open connection to postgres db
     try:
         params = config()
@@ -44,4 +45,3 @@ def store_measurement(sensor_uid, process_step, measure_value):
             conn.close()
             
 store_measurement('002', 'Button', 65748)
-            

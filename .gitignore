@@ -156,8 +156,8 @@ cython_debug/
 
 .idea/
 
-# Database connection files to postgres on raspberry pi 4
-database.ini
+# Database connection and Wifi passwords file
+pico_secrets.py
 
 # Pico Setup Files
 .vscode
