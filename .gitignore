@@ -163,11 +163,9 @@ cython_debug/
 database.ini
 
 # Pico Setup Files
-openocd
-pico-examples
-pico-extras
-pico-playground
-picoprobe
-pico-sdk
-picotool
+.vscode
+.picowgo
 
+
+# Mac Files
+.DS_Store
