@@ -1,3 +1,5 @@
+import network
+from time import sleep
 from pico_secrets import wifi_ssid, wifi_password
 
 
@@ -14,6 +16,7 @@ def connect_network():
         print(f"Connected on {ip}")
     except KeyboardInterrupt:
         machine.reset()
+    return ip
 
 def disconnect_network():
     wlan = network.WLAN(network.STA_IF)

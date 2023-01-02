@@ -1,5 +1,9 @@
 import os
 import json
+from umqttsimple import MQTTClient
+from machine import Pin, reset
+import utime
+from pico_secrets import mqtt_user, mqtt_password, mqtt_server
 
 
 def check_log_dir():
@@ -41,7 +45,18 @@ def new_json(path, result):
     json_result = json.dumps(result, separators= None)
     with open(path, 'w') as f:
         f.write(json_result)
-    
+        
+def mqtt_connect(client_id, mqtt_server, user_t, password_t):
+    client = MQTTClient(client_id, mqtt_server, user=user_t, password=password_t, keepalive=60)
+    client.connect()
+    print(f'Connected to {mqtt_server} MQTT Broker')
+    return client
+
+def mqtt_reconnect():
+    print('Failed to connected to MQTT Broker. Reconnecting...')
+    utime.sleep(5)
+    reset()
+  
 def log_local(result, what):
     '''
     Check the the file and path to file exists
@@ -67,5 +82,20 @@ def log_local(result, what):
     else:
         update_json(path, result)
             
-def log_remote():
-    print("Function is not complete")
+def log_remote(result):
+    client = 'Pico_W_1'
+    topic = 'Pico_Data'  
+    last_message = 0
+    message_interval = 5
+    counter = 0
+    
+    while True:
+        client = mqtt_connect(client, mqtt_server, mqtt_user, mqtt_password)
+        
+        while True:
+            client.publish(topic, msg=result)
+            print('published')
+            utime.sleep(3)
+
+    client.disconnect()
+        
