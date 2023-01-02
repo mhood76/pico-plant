@@ -6,7 +6,7 @@ To fulfill watering needs of house plants. By leveraging automation. Using Pytho
 ### System Architecture
 
 #### Conceptual Operations
-![Alt text](ref/system-diagram.svg)
+![Alt text](doc/system-diagram.svg)
 
 ### Operations
 Need to have a file named `database.ini` in the `/lib` diectory with the details of the database used to store date
