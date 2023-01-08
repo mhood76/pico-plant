@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+pico/lib/
 lib64/
 parts/
 sdist/
@@ -157,7 +157,7 @@ cython_debug/
 .idea/
 
 # Database connection and Wifi passwords file
-pico_secrets.py
+secrets.py
 
 # Pico Setup Files
 .vscode

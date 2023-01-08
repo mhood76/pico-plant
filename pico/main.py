@@ -1,12 +1,10 @@
-import utime
-from pico_network import connect_network, disconnect_network
-from get_measure import get_moisture
-from log_measure import log_local, log_remote
+from my_lib.pico_network import connect_network
 
 
 def main():
+    ip = connect_network()
+
 #    disconnect_network()
-#    ip = connect_network()
 #    result, gpio, ts = get_moisture(28) # returns `round(moisture reading)`
 #    
 #    result_cal_dic = { '001' : {"dry": 11111, "wet": 99999 },
@@ -29,4 +27,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

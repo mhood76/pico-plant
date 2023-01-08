@@ -2,7 +2,7 @@ import psycopg2
 from configparser import ConfigParser
 
 
-def config(filename='database.ini', section='postgresql'):
+def config(filename='secrets.py', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
